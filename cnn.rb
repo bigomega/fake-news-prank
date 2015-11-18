@@ -2,6 +2,8 @@ require 'sinatra'
 require 'uri'
 require 'net/http'
 
+set :port, 80
+
 set :public_folder, File.dirname(__FILE__) + '/static'
 
 get '/' do

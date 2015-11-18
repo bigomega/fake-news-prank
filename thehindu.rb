@@ -2,7 +2,8 @@ require 'sinatra'
 require 'uri'
 require 'net/http'
 
-set :port, 80
+# set :port, 80
+set :bind, '0.0.0.0'
 
 get '/' do
   send_file 'views/thehindu_index.html'

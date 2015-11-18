@@ -3,6 +3,7 @@ require 'uri'
 require 'net/http'
 
 set :port, 80
+set :bind, '0.0.0.0'
 
 set :public_folder, File.dirname(__FILE__) + '/static'
 
@@ -10,7 +11,7 @@ get '/' do
   send_file 'views/cnn_index.html'
 end
 
-get '/2015/11/18/india/chennai-threat-at-a-glance/index.html' do
+get '/2015/11/18/india/chennai-plane-crash-at-a-glance/index.html' do
   send_file 'views/cnn_article.html'
 end
 
